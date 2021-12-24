@@ -33,7 +33,7 @@ resource "yandex_vpc_subnet" "public-subnet" {
 }
 
 resource "yandex_compute_instance" "default" {
-  name        = "neto-test"
+  name        = "VM1"
   platform_id = "standard-v1"
   zone        = "ru-central1-a"
   
@@ -61,7 +61,7 @@ resource "yandex_compute_instance" "default" {
 }
 
 resource "yandex_compute_instance" "mixa" {
-  name        = "neto-test2"
+  name        = "VM2"
   platform_id = "standard-v1"
   zone        = "ru-central1-a"
   
