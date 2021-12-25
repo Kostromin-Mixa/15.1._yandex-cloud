@@ -90,7 +90,7 @@ resource "yandex_vpc_route_table" "net-rt" {
 
   static_route {
     destination_prefix = "0.0.0.0/0"
-    next_hop_address   = "192.168.10.254"
+    next_hop_address   = yandex_compute_instance.default.network_interface[0].ip_address
   }
 }
 
